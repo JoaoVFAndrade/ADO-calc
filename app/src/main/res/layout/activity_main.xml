@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="475dp"
+        android:layout_height="754dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="45dp">
+
+
+        <EditText
+            android:id="@+id/primeiro_numero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o primeiro numero"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/segundo_numero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o segundo numero"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="334dp"
+            android:layout_height="37dp"
+            android:text="Selecione qual operação você deseja" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="344dp"
+            android:layout_height="292dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/adicao"
+                android:layout_width="88dp"
+                android:layout_height="100dp"
+                android:onClick="calcularOperacao"
+                android:text="+" />
+
+            <RadioButton
+                android:id="@+id/subtracao"
+                android:layout_width="77dp"
+                android:layout_height="100dp"
+                android:onClick="calcularOperacao"
+                android:text="-" />
+
+            <RadioButton
+                android:id="@+id/multiplicacao"
+                android:layout_width="88dp"
+                android:layout_height="99dp"
+                android:onClick="calcularOperacao"
+                android:text="*" />
+
+            <RadioButton
+                android:id="@+id/divisao"
+                android:layout_width="85dp"
+                android:layout_height="104dp"
+                android:onClick="calcularOperacao"
+                android:text="÷" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="16dp"
+            android:padding="40dp"
+            android:text="Resultado: "
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="resetarValores"
+            android:text="Zerar" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
